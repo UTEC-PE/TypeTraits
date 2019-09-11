@@ -6,7 +6,8 @@
 #include <assert.h>
 
 #include "../mock/mocker.h"
-#include "../list.h"
+#include "../traits_list.h"
+#include "../self_list.h"
 
 using namespace std;
 
@@ -28,14 +29,14 @@ using namespace std;
 template <typename T>
 struct Greater {
     bool operator()(T a, T b) {
-        return a >= b; // What would happend without the =?
+        return a >= b;
     }
 };
 
 template <typename T>
 struct Less {
     bool operator()(T a, T b) {
-        return a <= b; // What would happend without the =?
+        return a <= b; 
     }
 };
 
@@ -52,7 +53,7 @@ struct Float {
 class Tester {
     private:        
         template <typename T>
-        static bool isSorted(List<T>& list);
+        static bool isSorted(TraitsList<T>& list);
 
     public:
         static void execute();

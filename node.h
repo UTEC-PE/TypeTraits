@@ -5,11 +5,10 @@ template <typename T>
 struct Node {
     T data;
     Node<T>* next;
-    Node<T>* prev;
       
     Node(T data) : data(data) {
-        next = prev = nullptr;
-    };
+        next = nullptr;
+    }
       
     void killSelf();
 };

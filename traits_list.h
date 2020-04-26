@@ -21,7 +21,7 @@ class TraitsList {
         TraitsList() : head(nullptr) {};
              
         bool insert(T data) {
-            // TODO
+            // TODO: Don't allow repeated elements
         }
              
         bool remove(T data) {
@@ -32,7 +32,7 @@ class TraitsList {
             // TODO
         }
 
-        T operator [] (int index) {
+        T operator[](int index) {
             // TODO
         }
              

@@ -18,7 +18,7 @@ class SelfList {
         SelfList(Method method) : head(nullptr) {};
 
         bool insert(T data) {
-            // TODO
+            // TODO: If the value is already in the list, just ignore it
         }
              
         bool remove(T data) {

@@ -5,8 +5,8 @@ void Tester::execute() {
 
     for (int j = 0; j < NUMBER_OF_TESTS; ++j) {
         unsigned int size = mocker.generateRandomInt(10);
-        List<Integer> integers;
-        List<Float> floats;
+        TraitsList<Integer> integers;
+        TraitsList<Float> floats;
 
         for (int i = 0; i < size; ++i) {
             integers.insert(2 * i + 1);
@@ -30,7 +30,7 @@ void Tester::execute() {
 }
 
 template <typename T>
-bool Tester::isSorted(List<T> &list) {
+bool Tester::isSorted(TraitsList<T> &list) {
     for (int i = 1; i < list.size(); ++i) {
         if ((is_same<T, Integer>::value) && list[i - 1] > list[i]) {
             return false;
